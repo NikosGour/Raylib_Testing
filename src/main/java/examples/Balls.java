@@ -11,27 +11,39 @@ import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class KeyboardInput {
-	public static final int WINDOW_HEIGHT = 1000;
-	public static final int WINDOW_WIDTH  = 1920;
+	public static final int     WINDOW_HEIGHT = 1000;
+	public static final int     WINDOW_WIDTH  = 1920;
+	public static final int     TARGET_FPS    = 60;
+	public static final Color[] colors        = new Color[]{ Color.BROWN , Color.RED , Color.BLACK , Color.BLUE , Color.GREEN };
 	
 	public static void main(String[] args) {
 		Raylib rl = new Raylib();
+		for (Color color : colors) {
+			color.setA(0x99);
+		}
 		rl.core.SetConfigFlags(Config.ConfigFlag.FLAG_WINDOW_RESIZABLE);
 		Tracelog.SetTraceLogLevel(Tracelog.TracelogType.LOG_ALL);
 		rl.core.InitWindow(WINDOW_WIDTH , WINDOW_HEIGHT , "Basic Window");
-		rl.core.SetTargetFPS(60);
+		rl.core.SetTargetFPS(TARGET_FPS);
 		ArrayList<Ball> balls = new ArrayList<>();
 		
+		int frameCounter = 0;
 		while (! rl.core.WindowShouldClose()) {
 			rl.core.BeginDrawing();
 			//////////////////////
-			rl.core.ClearBackground(Color.DARKBLUE);
+			rl.core.ClearBackground(Color.WHITE);
+			frameCounter++;
+			if (frameCounter >= TARGET_FPS / 2) {
+				Ball redBall = new Ball(rl);
+				balls.add(redBall);
+				frameCounter = 0;
+			}
 			
 			for (Ball ball : balls) {
 				ball.draw();
 			}
 			if (rl.core.IsKeyPressed(Keyboard.KEY_D)) {
-				Ball redBall = new Ball(Color.RED , rl);
+				Ball redBall = new Ball(rl);
 				balls.add(redBall);
 			}
 			//////////////////////
@@ -64,6 +76,14 @@ public class KeyboardInput {
 			this(Color.RED , new Vector2(ThreadLocalRandom.current().nextInt(0 , WINDOW_WIDTH) ,
 			                             ThreadLocalRandom.current().nextInt(0 , WINDOW_HEIGHT)) ,
 			     ThreadLocalRandom.current().nextFloat(30 , 100) , rl_ctx);
+		}
+		
+		public Ball(Raylib rl_ctx) {
+			
+			this(colors[ThreadLocalRandom.current().nextInt(colors.length)] ,
+			     new Vector2(ThreadLocalRandom.current().nextInt(0 , WINDOW_WIDTH) ,
+			                 ThreadLocalRandom.current().nextInt(0 , WINDOW_HEIGHT)) , ThreadLocalRandom.current().nextFloat(30 , 100) ,
+			     rl_ctx);
 		}
 		
 		public Ball(Vector2 position , float radius , Raylib rl_ctx) {
