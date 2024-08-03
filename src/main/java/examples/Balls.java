@@ -23,8 +23,7 @@ public class Balls {
 		Tracelog.SetTraceLogLevel(Tracelog.TracelogType.LOG_ALL);
 		rl.core.InitWindow(WINDOW_WIDTH , WINDOW_HEIGHT , "Balls");
 		rl.core.SetTargetFPS(TARGET_FPS);
-		new RaylibContext().buildSingleton(WINDOW_WIDTH , WINDOW_HEIGHT , TARGET_FPS , rl);
-		RaylibContext rl_ctx = RaylibContext.getSingleton();
+		RaylibContext rl_ctx = new RaylibContext(WINDOW_WIDTH , WINDOW_HEIGHT , TARGET_FPS , rl);
 		ArrayList<Ball> balls = new ArrayList<>();
 		
 		int frameCounter = 0;

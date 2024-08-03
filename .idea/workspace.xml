@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="307ad8f5-420b-4682-8da7-32226f4d232c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Raylib_Testing/examples/KeyboardInput$Ball.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Raylib_Testing/examples/KeyboardInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Raylib_Testing/examples/Balls.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Raylib_Testing/examples/Balls.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Raylib_Testing/examples/MouseControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Raylib_Testing/examples/MouseControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Raylib_Testing/utils/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Raylib_Testing/utils/Ball.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Raylib_Testing/utils/RaylibContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Raylib_Testing/utils/RaylibContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/examples/Balls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examples/Balls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examples/MouseControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examples/MouseControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RaylibContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RaylibContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +50,7 @@
     "Application.KeyboardInput.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.MouseControl.executor": "Run",
+    "Application.SquareFractal.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -79,11 +85,25 @@
       <updated>1722516982675</updated>
       <workItem from="1722516987604" duration="23000" />
       <workItem from="1722517028623" duration="8198000" />
+      <workItem from="1722557524555" duration="246000" />
+      <workItem from="1722589753315" duration="1804000" />
+      <workItem from="1722695088988" duration="5663000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/examples/SquareFractal.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

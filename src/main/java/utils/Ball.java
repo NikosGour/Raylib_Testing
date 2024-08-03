@@ -9,14 +9,13 @@ public class Ball {
 	public              Vector2       position;
 	public              float         radius;
 	public              Color         color;
-	private             RaylibContext rl_ctx = null;
+	private final       RaylibContext rl_ctx;
 	public static final Color[]       colors = new Color[]{ Color.BROWN , Color.RED , Color.BLACK , Color.BLUE , Color.GREEN };
 	
 	static {
 		for (Color _color : colors) {
 			_color.setA(0x99);
 		}
-		
 	}
 	
 	
